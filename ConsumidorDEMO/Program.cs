@@ -15,7 +15,6 @@ namespace ConsumidorDEMO
 
                 channel.QueueDeclare(cola,false,false,false,null);
                 var consumer = new EventingBasicConsumer(channel);
-                Console.WriteLine("Presiona CTRL + C para salir....");
 
                 consumer.Received += (model, ea) =>
                 {
